@@ -1,12 +1,10 @@
 # -*- coding:utf-8 -*-
 import matplotlib.pyplot as plt
-from numpy import *
+from matplotlib.font_manager import FontProperties
+from sklearn.linear_model import LinearRegression
 import sys
 reload(sys)
 sys.setdefaultencoding("utf-8")
-
-from matplotlib.font_manager import FontProperties
-from sklearn.linear_model import LinearRegression
 
 font = FontProperties(fname=r"c:\windows\fonts\msyh.ttc", size=10)
 
@@ -31,13 +29,3 @@ y2 = model.predict(x2)
 plt.plot(x, y, 'k.')
 plt.plot(x2, y2, 'g-')
 plt.show()
-Y = mat([[0, 0, 1],
-         [0, 2, 1],
-         [-2, 0, 1],
-         [-2, -2, -1]])
-yt = Y.T*Y
-# print linalg.det(yt)
-# print linalg.inv(yt)
-print yt
-print linalg.inv(Y.T*Y)
-print linalg.inv(Y.T*Y)*Y.T
